@@ -1,0 +1,8 @@
+{
+  "name": "nana-benonis-reviews",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "node server.mjs"
+  },
+  "dependencies": {}
+}
