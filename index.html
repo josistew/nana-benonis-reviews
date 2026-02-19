@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nana Benonis | Revolution Mortgage</title>
+  <meta name="description" content="Rate your experience with Nana Benonis at Revolution Mortgage">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#40E0D0',
+            'primary-dark': '#32b3a6',
+            'neutral-dark': '#555555',
+          },
+          fontFamily: {
+            sans: ['Poppins', 'sans-serif'],
+            script: ['Dancing Script', 'cursive'],
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in { animation: fadeIn 0.6s ease-out forwards; }
+    .animate-slide-up { animation: slideUp 0.6s ease-out forwards; }
+
+    .star-svg {
+      transition: all 0.3s ease;
+    }
+    .star-item {
+      cursor: pointer;
+    }
+    .star-item:hover .star-svg {
+      transform: scale(1.15);
+    }
+    .star-label {
+      transition: all 0.3s ease;
+    }
+    .star-label.active {
+      font-weight: 800;
+      color: #333;
+    }
+
+    .card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body class="font-sans bg-gray-100 min-h-screen flex flex-col">
+  <main class="flex-1 flex flex-col">
+    <!-- Header -->
+    <header class="w-full bg-white shadow-sm py-4 border-t-4 border-primary">
+      <div class="container mx-auto px-4 flex justify-between items-center">
+        <div class="w-72">
+          <img src="images/revolution-mortgage-transparent.png" alt="Revolution Mortgage" class="object-contain w-full">
+        </div>
+        <div class="text-right">
+          <p class="text-sm text-gray-700">3907 Wrightsville Avenue, Suite 100</p>
+          <p class="text-sm text-gray-700">Wilmington, NC 28403</p>
+        </div>
+      </div>
+    </header>
+
+    <!-- Feedback Card -->
+    <div class="container mx-auto px-4 py-12 flex-1 flex flex-col items-center">
+      <div class="max-w-5xl w-full bg-white rounded-lg shadow-lg p-10 text-center border-t-4 border-primary card animate-fade-in">
+        <h1 class="text-4xl font-bold text-black mb-4 animate-slide-up">How Was Your Experience?</h1>
+        <p class="text-xl text-neutral-dark mb-10 animate-slide-up max-w-3xl mx-auto">
+          Your feedback helps Nana Benonis at Revolution Mortgage improve our services. Please take a moment to rate your experience.
+        </p>
+
+        <!-- Star Rating -->
+        <div class="animate-fade-in mb-16">
+          <div class="flex flex-col items-center justify-center py-6">
+            <div id="star-container" class="flex items-center justify-center space-x-8 mb-8">
+              <div class="flex flex-col items-center gap-2 star-item" data-value="1">
+                <svg class="star-svg w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 transition-all duration-300 cursor-pointer" viewBox="0 0 24 24" style="fill: transparent; stroke: #40E0D0; stroke-width: 1.5;">
+                  <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path>
+                </svg>
+                <span class="star-label text-xs font-semibold tracking-wider text-neutral-dark">POOR</span>
+              </div>
+              <div class="flex flex-col items-center gap-2 star-item" data-value="2">
+                <svg class="star-svg w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 transition-all duration-300 cursor-pointer" viewBox="0 0 24 24" style="fill: transparent; stroke: #40E0D0; stroke-width: 1.5;">
+                  <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path>
+                </svg>
+                <span class="star-label text-xs font-semibold tracking-wider text-neutral-dark">SUBPAR</span>
+              </div>
+              <div class="flex flex-col items-center gap-2 star-item" data-value="3">
+                <svg class="star-svg w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 transition-all duration-300 cursor-pointer" viewBox="0 0 24 24" style="fill: transparent; stroke: #40E0D0; stroke-width: 1.5;">
+                  <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path>
+                </svg>
+                <span class="star-label text-xs font-semibold tracking-wider text-neutral-dark">OK</span>
+              </div>
+              <div class="flex flex-col items-center gap-2 star-item" data-value="4">
+                <svg class="star-svg w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 transition-all duration-300 cursor-pointer" viewBox="0 0 24 24" style="fill: transparent; stroke: #40E0D0; stroke-width: 1.5;">
+                  <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path>
+                </svg>
+                <span class="star-label text-xs font-semibold tracking-wider text-neutral-dark">GOOD</span>
+              </div>
+              <div class="flex flex-col items-center gap-2 star-item" data-value="5">
+                <svg class="star-svg w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 transition-all duration-300 cursor-pointer" viewBox="0 0 24 24" style="fill: transparent; stroke: #40E0D0; stroke-width: 1.5;">
+                  <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path>
+                </svg>
+                <span class="star-label text-xs font-semibold tracking-wider text-neutral-dark">GREAT</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="text-sm text-primary mt-4">Thank you for choosing Revolution Mortgage.</p>
+        <p class="text-sm text-primary">Your feedback helps us provide better mortgage services to the Wilmington community.</p>
+      </div>
+    </div>
+
+    <!-- Your Feedback Matters Section -->
+    <div class="w-full bg-gray-100 py-12">
+      <div class="container mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <div class="inline-block bg-primary text-white px-4 py-2 rounded-full text-sm font-medium mb-4">Reviews made simple.</div>
+          <h1 class="text-4xl md:text-5xl font-bold text-black mb-4 animate-slide-up">Your feedback matters!</h1>
+          <p class="text-lg text-neutral-dark mb-6 animate-slide-up">
+            Your opinion helps us improve our mortgage services. Please take a moment to rate your experience with Nana Benonis at Revolution Mortgage.
+          </p>
+        </div>
+        <div class="flex flex-col items-center justify-center">
+          <!-- Circular Photo -->
+          <div class="relative w-48 h-48 md:w-64 md:h-64 mb-4 rounded-full overflow-hidden border-4 border-primary shadow-lg">
+            <img src="images/nana-benonis.png" alt="Nana Benonis - Branch Production Sales Manager" class="object-cover w-full h-full">
+          </div>
+          <!-- Signature Image -->
+          <img src="images/nana-benonis-signature.png" alt="Nana Benonis" class="h-16 md:h-20 object-contain mt-2" style="mix-blend-mode: multiply;">
+          <p class="text-sm text-gray-600 mt-2">Branch Production Sales Manager</p>
+          <p class="text-sm text-gray-600">NMLS: 2215828</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="w-full py-8 bg-[#2c3e50] text-white">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Hours -->
+          <div class="space-y-4">
+            <h3 class="font-bold text-lg mb-4">HOURS</h3>
+            <ul class="space-y-2">
+              <li class="flex justify-between">
+                <span class="font-mono text-sm">MON-FRI:</span>
+                <span>9am - 5pm</span>
+              </li>
+              <li class="flex justify-between">
+                <span class="font-mono text-sm">SAT-SUN:</span>
+                <span>Closed</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Directions -->
+          <div>
+            <h3 class="font-bold text-lg mb-4">DIRECTIONS</h3>
+            <div class="h-48 bg-gray-200 rounded-md overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3296.8!2d-77.8868!3d34.2104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89a9f5a20debaed5%3A0x0!2s3907%20Wrightsville%20Ave%2C%20Wilmington%2C%20NC%2028403!5e0!3m2!1sen!2sus"
+                width="100%"
+                height="100%"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+
+          <!-- Contact -->
+          <div>
+            <h3 class="font-bold text-lg mb-4">REVOLUTION MORTGAGE</h3>
+            <ul class="space-y-2">
+              <li>3907 Wrightsville Avenue</li>
+              <li>Suite 100</li>
+              <li>Wilmington, NC 28403</li>
+              <li class="mt-4">
+                <a href="tel:9046874975" class="text-primary hover:underline">(904) 687-4975</a>
+              </li>
+              <li>
+                <a href="mailto:nbenonis@revolutionmortgage.com" class="text-primary hover:underline">nbenonis@revolutionmortgage.com</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="text-center mt-8 pt-4 border-t border-gray-600">
+          <p class="text-sm text-gray-400">&copy; 2025 Nana Benonis. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </main>
+  <script>
+    const stars = document.querySelectorAll('.star-item');
+    let selectedRating = 0;
+
+    function fillStars(upTo) {
+      stars.forEach(star => {
+        const val = parseInt(star.dataset.value);
+        const svg = star.querySelector('.star-svg');
+        const label = star.querySelector('.star-label');
+        if (val <= upTo) {
+          svg.style.fill = '#40E0D0';
+          svg.style.stroke = '#40E0D0';
+          label.classList.add('active');
+        } else {
+          svg.style.fill = 'transparent';
+          svg.style.stroke = '#40E0D0';
+          label.classList.remove('active');
+        }
+      });
+    }
+
+    stars.forEach(star => {
+      star.addEventListener('mouseenter', () => {
+        fillStars(parseInt(star.dataset.value));
+      });
+
+      star.addEventListener('click', () => {
+        selectedRating = parseInt(star.dataset.value);
+        fillStars(selectedRating);
+      });
+    });
+
+    document.getElementById('star-container').addEventListener('mouseleave', () => {
+      fillStars(selectedRating);
+    });
+  </script>
+</body>
+</html>
